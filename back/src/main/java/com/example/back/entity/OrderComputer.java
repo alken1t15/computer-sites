@@ -2,6 +2,7 @@ package com.example.back.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Table(name = "order_computer")
+@NoArgsConstructor
 public class OrderComputer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +22,13 @@ public class OrderComputer {
     @ManyToOne
     @JoinColumn(name = "computer_id")
     private Computer computer;
-    @Column(name = "total_price")
     private Integer price;
     private Integer count;
+
+    public OrderComputer(HistoryOrder historyOrder, Computer computer, Integer price, Integer count) {
+        this.historyOrder = historyOrder;
+        this.computer = computer;
+        this.price = price;
+        this.count = count;
+    }
 }

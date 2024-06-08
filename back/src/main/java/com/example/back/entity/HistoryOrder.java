@@ -30,4 +30,13 @@ public class HistoryOrder {
     private String address;
     @OneToMany(mappedBy = "historyOrder")
     private List<OrderComputer> orderComputers;
+
+    public HistoryOrder(String name, Users user, CreditCart creditCart, Integer totalPrice, LocalDateTime date, String address) {
+        this.name = name;
+        this.user = user;
+        this.creditCart = creditCart;
+        this.totalPrice = totalPrice;
+        this.date = date;
+        this.address = address;
+    }
 }

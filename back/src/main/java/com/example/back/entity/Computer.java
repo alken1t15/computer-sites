@@ -32,4 +32,9 @@ public class Computer {
     private List<OrderComputer> orderComputers;
     @OneToMany(mappedBy = "computer")
     private List<CartComputer> cartComputers;
+
+    public Computer(String name, Integer price) {
+        this.name = name;
+        this.price = price;
+    }
 }

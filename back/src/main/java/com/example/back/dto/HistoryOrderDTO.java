@@ -17,10 +17,9 @@ import java.util.List;
 public class HistoryOrderDTO {
     private Long id;
     private String name;
-    private Users user;
-    private CreditCart creditCart;
+    private CreditCartDTO creditCart;
     private Integer totalPrice;
     private LocalDateTime date;
     private String address;
-    private List<OrderComputer> orderComputers;
+    private List<OrderComputerDTO> orderComputers;
 }

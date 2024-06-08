@@ -22,4 +22,11 @@ public class CreditCart {
     private String name;
     @OneToMany(mappedBy = "creditCart")
     private List<HistoryOrder> historyOrders;
+
+    public CreditCart(String number, String date, String security, String name) {
+        this.number = number;
+        this.date = date;
+        this.security = security;
+        this.name = name;
+    }
 }
