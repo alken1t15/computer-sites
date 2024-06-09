@@ -60,10 +60,10 @@ const SignUp: React.FC = () => {
         <div className="signIn-container">
             <p className="signIn-title">Создать профиль</p>
             <Input length={35} placeholder="Почта" styles={{ marginTop: 15 }} onChangeF={setEmailOrNum} type="text" />
-            <Input length={35} placeholder="Номер телефона" styles={{ marginTop: 15 }} onChangeF={setNewPhone} type="text" />
-            <Input length={35} placeholder="Введите свое имя" styles={{ marginTop: 15 }} onChangeF={setUserName} type="text" />
-            <Input length={35} placeholder="Пароль" styles={{ marginTop: 15 }} onChangeF={setPas} type="password" />
-            <Input length={35} error={errorPass} placeholder="Повторите пароль" styles={{ marginTop: 15 }} onChangeF={setRepeatPas} type="password" />
+            <Input length={12} placeholder="Номер телефона" styles={{ marginTop: 15 }} onChangeF={setNewPhone} type="text" />
+            <Input length={15} placeholder="Введите свое имя" styles={{ marginTop: 15 }} onChangeF={setUserName} type="text" />
+            <Input length={15} placeholder="Пароль" styles={{ marginTop: 15 }}  onChangeF={setPas} type="password" />
+            <Input length={15} error={errorPass} placeholder="Повторите пароль" styles={{ marginTop: 15 }} onChangeF={setRepeatPas} type="password" />
 
 
 
