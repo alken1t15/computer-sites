@@ -1,0 +1,77 @@
+.signIn{
+  &-container{
+    width: 534px;
+    margin: 100px auto;
+  }
+  &-title{
+    font-weight: 700;
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  &-top-text{
+    margin-top: 30px;
+    &-new{
+      font-weight: 400;
+      font-size: 20px;
+      color: var(--dark);
+    }
+    &-create{
+      font-weight: 400;
+      font-size: 20px;
+      color: #7c6afa;
+      cursor: pointer;
+    }
+  }
+  &-bot{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-forgot{
+      font-size: 20px;
+      color: #7c6afa;
+    }
+  }
+
+}
+.switcher{
+  display: flex;
+  align-items: center;
+  &__text{
+    font-size: 20px;
+    color: #bdbdbd;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .3s;
+    &-active{
+      color: var(--orange);
+      transition: .3s;
+    }
+  }
+}
+
+.standard-btn{
+  margin-top: 30px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  border-radius: 20px;
+  padding: 16px 40px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  &-active{
+    border: 1px solid transparent;
+    background-color: #7c6afa;
+    color: white;
+    transition: 0.3s;
+  }
+}
+
