@@ -11,7 +11,8 @@ create table users
     jwt      text
 );
 
-insert into users (email, phone, password, name) VALUES ('maxim@gmail.com','87471553450','$2a$12$xOOOH9PioLo48TKZCc6IGOSQJ.Qw2YbKIhefjIlldQqLtc0w7OzC2','Максим');
+insert into users (email, phone, password, name)
+VALUES ('maxim@gmail.com', '87471553450', '$2a$12$xOOOH9PioLo48TKZCc6IGOSQJ.Qw2YbKIhefjIlldQqLtc0w7OzC2', 'Максим');
 
 create table category
 (
@@ -23,7 +24,10 @@ INSERT INTO category (name)
 VALUES ('Процессор'),
        ('ОЗУ'),
        ('Блок питания'),
-       ('Материнская плата');
+       ('Материнская плата'),
+       ('Графическая карта'),
+       ('Накопитель'),
+       ('Охлаждение');
 
 create table product
 (
@@ -36,21 +40,35 @@ create table product
 );
 
 INSERT INTO product (category_id, name, price, img, description)
-VALUES
-    (1, 'Intel Core i9-9900K', 400, '1.png', 'Процессор Intel Core i9-9900K'),
-    (2, 'Corsair Vengeance LPX 16GB', 100, '1.png', 'ОЗУ Corsair Vengeance LPX, 16 ГБ'),
-    (3, 'EVGA SuperNOVA 750 G5', 150, '1.png', 'Блок питания EVGA SuperNOVA 750 G5'),
-    (4, 'ASUS ROG Strix Z390-E Gaming', 250, '1.png', 'Материнская плата ASUS ROG Strix Z390-E Gaming');
+VALUES (1, 'Intel Core i9-9900K', 180000, '1.png', 'Процессор Intel Core i9-9900K'),
+       (1, 'AMD Ryzen 9 3900X', 160000, '1.png', 'Процессор AMD Ryzen 9 3900X'),
+       (2, 'Corsair Vengeance LPX 16GB', 45000, '1.png', 'ОЗУ Corsair Vengeance LPX, 16 ГБ'),
+       (2, 'G.SKILL Trident Z RGB 32GB', 85000, '1.png', 'ОЗУ G.SKILL Trident Z RGB, 32 ГБ'),
+       (3, 'EVGA SuperNOVA 750 G5', 67500, '1.png', 'Блок питания EVGA SuperNOVA 750 G5'),
+       (3, 'Corsair RM850x', 90000, '2.png', 'Блок питания Corsair RM850x'),
+       (4, 'ASUS ROG Strix Z390-E Gaming', 112500, '1.png', 'Материнская плата ASUS ROG Strix Z390-E Gaming'),
+       (4, 'MSI MPG Z490 Gaming Edge WiFi', 120000, '1.png', 'Материнская плата MSI MPG Z490 Gaming Edge WiFi'),
+       (5, 'NVIDIA GeForce RTX 3080', 300000, '1.png', 'Графическая карта NVIDIA GeForce RTX 3080'),
+       (5, 'AMD Radeon RX 6800 XT', 280000, '1.png', 'Графическая карта AMD Radeon RX 6800 XT'),
+       (6, 'Samsung 970 EVO 1TB', 100000, '1.png', 'Накопитель Samsung 970 EVO, 1 ТБ'),
+       (6, 'Western Digital Black SN750 1TB', 95000, '1.png', 'Накопитель Western Digital Black SN750, 1 ТБ'),
+       (7, 'Cooler Master Hyper 212', 20000, '1.png', 'Охлаждение Cooler Master Hyper 212'),
+       (7, 'Noctua NH-D15', 35000, '1.png', 'Охлаждение Noctua NH-D15');
 
 create table computer
 (
     id    serial primary key,
     name  varchar not null,
     price int     not null,
-    img   varchar not null
+    img   varchar
 );
 
-insert into computer (name, price, img) VALUES ('Супер мега макс',1000000,'1.png');
+insert into computer (name, price, img)
+VALUES ('Супер мега макс', 1000000, '1.png'),
+       ('Игровая станция', 850000, '1.png'),
+       ('Рабочая станция', 750000, '1.png'),
+       ('Бюджетный вариант', 300000, '1.png'),
+       ('Ультра компакт', 450000, '1.png');
 
 create table computer_product
 (
@@ -59,11 +77,18 @@ create table computer_product
     product_id  int references product (id)
 );
 
-insert into computer_product (computer_id, product_id) VALUES (1,1),
-(1,2),
-(1,3),
-(1,4);
-
+insert into computer_product (computer_id, product_id)
+VALUES (1, 1),
+       (1, 1),
+       (1, 3),
+       (2, 1),
+       (2, 5),
+       (3, 1),
+       (3, 4),
+       (4, 1),
+       (4, 2),
+       (5, 2),
+       (5, 7);
 create table credit_cart
 (
     id       serial primary key not null,
@@ -72,6 +97,8 @@ create table credit_cart
     security varchar            not null,
     name     varchar            not null
 );
+insert into credit_cart (number, date, security, name)
+VALUES ('876577678678', '08/24', '123', 'Maxim Test');
 
 create table history_order
 (
@@ -84,6 +111,9 @@ create table history_order
     address        varchar   not null
 );
 
+insert into history_order (users_id, credit_cart_id, total_price, name, date, address)
+VALUES (1, 1, 500000, '94234324', current_timestamp, 'Республика 44');
+
 create table order_computer
 (
     id               serial primary key,
@@ -92,6 +122,8 @@ create table order_computer
     price            int not null,
     count            int not null
 );
+insert into order_computer (history_order_id, computer_id, price, count)
+VALUES (1, 1, 500000, 1);
 
 
 create table cart

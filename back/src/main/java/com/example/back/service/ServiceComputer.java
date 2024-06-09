@@ -1,17 +1,21 @@
 package com.example.back.service;
 
+import com.example.back.dto.ComputerAddDTO;
 import com.example.back.dto.ComputerListDTO;
 import com.example.back.dto.ComputerOneDTO;
 import com.example.back.dto.ProductDTO;
 import com.example.back.entity.Computer;
 import com.example.back.entity.Product;
 import com.example.back.repository.RepositoryComputer;
+import com.example.back.repository.RepositoryProduct;
 import io.micrometer.common.util.StringUtils;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +26,7 @@ public class ServiceComputer {
     private final RepositoryComputer repositoryComputer;
     private final ServiceImg serviceImg;
     private final ModelMapper modelMapper;
+    private final RepositoryProduct repositoryProduct;
 
 
     public ResponseEntity getAllComputer(String name) {
@@ -61,5 +66,32 @@ public class ServiceComputer {
 
     public Computer findById(Long id){
         return repositoryComputer.findById(id).orElse(null);
+    }
+
+    public ResponseEntity addNewComputer(ComputerAddDTO computerAddDTO, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            List<String> errors = new ArrayList<>();
+            for (FieldError fieldError : bindingResult.getFieldErrors()) {
+                String field = fieldError.getField();
+                String nameError = fieldError.getDefaultMessage();
+                errors.add(String.format("Поле %s ошибка: %s", field, nameError));
+            }
+            return new ResponseEntity(errors, HttpStatus.BAD_REQUEST);
+        }
+        Computer computer = repositoryComputer.save(new Computer(computerAddDTO.getName(),0));
+        List<Product> products = new ArrayList<>();
+        computer.setProducts(products);
+        int price = 0;
+        for (Long id : computerAddDTO.getIdProducts()){
+            Product product = repositoryProduct.findById(id).orElseThrow();
+            computer.getProducts().add(product);
+            computer.setProducts(computer.getProducts());
+            price+= product.getPrice();
+            repositoryComputer.save(computer);
+        }
+        computer.setPrice(price);
+        computer.setImg("1.png");
+        repositoryComputer.save(computer);
+        return new ResponseEntity(HttpStatus.OK);
     }
 }
