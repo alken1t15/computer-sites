@@ -18,7 +18,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -34,7 +36,15 @@ public class ServiceComputer {
         if (StringUtils.isBlank(name)) {
             computers = repositoryComputer.findAll();
         } else {
-            computers = repositoryComputer.findAllByNameLikeIgnoreCase(name);
+            List<Computer> arr = new ArrayList<>();
+            Set<Computer> set = new HashSet<>(arr);
+            computers = repositoryComputer.findByStartName(name);
+            set.addAll(computers);
+            computers = repositoryComputer.findByBetweenName(name);
+            set.addAll(computers);
+            computers = repositoryComputer.findByEndName(name);
+            set.addAll(computers);
+            computers = new ArrayList<>(set);
         }
         List<ComputerListDTO> computerListDTOS = new ArrayList<>();
         for (Computer c : computers) {

@@ -28,7 +28,7 @@ public class HistoryOrder {
     private Integer totalPrice;
     private LocalDateTime date;
     private String address;
-    @OneToMany(mappedBy = "historyOrder")
+    @OneToMany(mappedBy = "historyOrder",cascade = CascadeType.ALL)
     private List<OrderComputer> orderComputers;
 
     public HistoryOrder(String name, Users user, CreditCart creditCart, Integer totalPrice, LocalDateTime date, String address) {

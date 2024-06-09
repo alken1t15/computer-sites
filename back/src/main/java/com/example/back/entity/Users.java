@@ -23,9 +23,9 @@ public class Users {
     private String name;
     private String jwt;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<HistoryOrder> historyOrders;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Cart> carts;
 
     public Users(String email, String password, String phone, String name) {
