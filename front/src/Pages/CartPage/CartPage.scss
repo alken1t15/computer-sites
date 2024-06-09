@@ -1,10 +1,10 @@
 .cart-items-box{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .cart__title{
-  margin-top: 50px;
+  margin-top: 25px;
   display: block;
   width: 100%;
   font-weight: 600;
@@ -12,7 +12,7 @@
   font-size: 32px;
   line-height: 110%;
   letter-spacing: -0.02em;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .button-total{
@@ -46,7 +46,7 @@
     font-size: 30px;
     line-height: 100%;
     text-align: center;
-    color: #b6532b;
+    color: #fff;
     margin-bottom: 15px;
   }
   &__subtitle{
@@ -54,7 +54,6 @@
     font-size: 20px;
     line-height: 100%;
     text-align: center;
-    color: #b6532b;
   }
   &__btn{
     margin-top: 50px;
@@ -69,7 +68,7 @@
     line-height: 129%;
     letter-spacing: -0.02em;
     border-radius: 20px;
-    border: none;
-    background: #b96442;
+    border: 1px solid #fff;
+    background: transparent;
   }
 }

@@ -8,8 +8,8 @@ const FinishedPage: React.FC = () => {
     return (
         <div className={'container finished-container'}>
             <p className="finished-container__title">Благодарим за заказ!</p>
-            <p className="finished-container__text">Ваш заказ будет доставлен в выбранное время</p>
-            <a href={'http://localhost:3000/main/shop'} className="finished-container__btn">Перейти на главную страницу</a>
+            <p className="finished-container__text">Наш курьер свяжется с вами</p>
+            <a href={SHOP_PAGE_ROUTE} className="finished-container__btn">Перейти в магазин</a>
         </div>
     );
 };

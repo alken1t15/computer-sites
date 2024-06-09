@@ -4,11 +4,7 @@ import React, {useEffect, useState} from 'react';
 import './OrderPage.scss';
 import Input from "../../Components/UI/Input/Input";
 import {Link, useNavigate} from "react-router-dom";
-import {FINISHED_PAGE_ROUTE} from "../../Utils/Routes";
-import Switch from "../../Components/UI/Switch/Switch";
-import {addCards, getCards} from "../../Http/Card";
-import {addNewUserAddress, getAddresses} from '../../Http/Address';
-import {getCartItems} from "../../Http/Cart";
+import {FINISHED_PAGE_ROUTE} from "../../Utils/Routes";import {getCartItems} from "../../Http/Cart";
 import {addOrder} from "../../Http/Order";
 
 const OrderPage: React.FC = () => {
@@ -54,16 +50,12 @@ const OrderPage: React.FC = () => {
     useEffect(()=>{
 
 
-        // getCartItems().then((response)=>{
-        //     setTotal(response.data.total)
-        //     let newArr: any[] = [];
-        //     response.data.orderDTOs.forEach((el: any, index: any)=>{
-        //         newArr.push(el.id)
-        //     })
-        //     // setIdOrder(newArr)
-        // }).catch((error)=>{
-        //
-        // })
+        getCartItems().then((response)=>{
+            setTotal(response.data.totalPrice)
+
+        }).catch((error)=>{
+
+        })
 
 
     }, [])
@@ -73,35 +65,70 @@ const OrderPage: React.FC = () => {
         setAddress(value)
     }
 
+    let navigator = useNavigate()
+
     return (
         <div style={{paddingBottom: 50}}>
-            <div className="container" style={{flexWrap: "wrap"}}>
-                <p className="cart__title">Доставка</p>
-                   <div className="info-box">
-                       <div className="info-box-l">
-                           <div className="info-box-r">
-                               <div className="person-info-block-label">Адрес</div>
-                               <Input length={35} placeholder="" styles={{ marginTop: 15 }} onChangeF={setNewAddress} type="text" />
+            <div className="container" style={{display: "block"}}>
+               <div style={{display: "flex"}}>
+                   <div> <p className="cart__title">Доставка</p>
+                       <div className="info-box">
+                           <div className="info-box-l">
+                               <div className="info-box-r">
+                                   <div className="person-info-block-label">Адрес</div>
+                                   <Input length={35} placeholder="" styles={{ marginTop: 15 }} onChangeF={setNewAddress} type="text" />
+
+                               </div>
 
                            </div>
 
+
+
+                       </div></div>
+                   <div className={`added-info-box added-info-box-card`} style={{marginLeft: 25}}>
+                        <p className="cart__title" style={{marginLeft: 15}}>Оплата</p>
+                       <div className="card-box">
+                           <div className="added-info-item added-info-item-card" style={{marginTop: 0}}>
+                               <p className="added-info-item-card__text">Номер карты</p>
+                               <input value={cardNum !== '' ? cardNum : ''} onChange={(e)=>{
+                                   handleInputChange(e);
+                               }} type="text" placeholder={'0000 0000 0000 0000'} className="added-info-item__input  added-info-item__input-card"/>
+                           </div>
+                           <div className="card-bottom">
+                               <div className="added-info-item added-info-item-card">
+                                   <p className="added-info-item-card__text">Срок действия</p>
+                                   <input value={expiration !== '' ? expiration : ''} onChange={(e)=>{
+                                       handleInputDateChange(e)
+                                   }} type="text" maxLength={5} placeholder={'ММ/ГГ'} className="added-info-item__input added-info-item__input-card added-info-item__input-card-m"/>
+                               </div>
+                               <div className="added-info-item added-info-item-card">
+                                   <p className="added-info-item-card__text">Код безопасности</p>
+                                   <input value={cardCvv !== '' ? cardCvv : ''} onChange={(e)=>{
+                                       handleInputCVVChange(e)
+                                   }} type="text" maxLength={3} placeholder={'000'} className="added-info-item__input  added-info-item__input-card added-info-item__input-card-m"/>
+                               </div>
+
+                           </div>
+                           <div className="added-info-item added-info-item-card" style={{marginTop: 0}}>
+                               <p className="added-info-item-card__text" style={{marginTop: 15}}>Имя владельца</p>
+                               <input value={cardName !== '' ? cardName : ''} onChange={(e)=>{
+                                   setCardName(e.target.value);
+                               }} type="text" placeholder={'Timur'} className="added-info-item__input  added-info-item__input-card"/>
+                           </div>
                        </div>
-
-
-
                    </div>
-
-
+               </div>
+                <br/>
                 <div className="total-box">
                     <p className="total-box__text"><span>Сумма заказа</span> <span>{total} ₸</span></p>
                     <p className="total-box__text"><span>Доставка</span> <span>бесплатно</span></p>
                     <p className="total-box__text total-box__text-t"><span>Всего</span> <span>{total} ₸</span></p>
                     <button onClick={(e)=>{
-                        // addOrder().then((response)=>{
-                        //     navigator(FINISHED_PAGE_ROUTE)
-                        // }).catch((error)=>{
-                        //
-                        // })
+                        addOrder(cardNum, expiration, cardCvv, cardName, address).then((response)=>{
+                            navigator(FINISHED_PAGE_ROUTE)
+                        }).catch((error)=>{
+
+                        })
 
                     }} className="create-order">
 

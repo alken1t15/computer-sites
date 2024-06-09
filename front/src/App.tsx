@@ -23,7 +23,10 @@ import Layout from "./Components/Layout/Layout";
 function App() {
     let navigator = useNavigate()
     useEffect(()=>{
-        navigator(SHOP_PAGE_ROUTE)
+        let data = window.location.href.split('3000/')
+        if(data[1] === ''){
+            navigator(SHOP_PAGE_ROUTE)
+        }
     }, [])
   return (
     <div className="App">

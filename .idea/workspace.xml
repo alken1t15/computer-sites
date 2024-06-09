@@ -5,168 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ddc82d3-7038-48dd-a2ab-d4c02103905c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/back/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/controller/ControllerCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/dto/CategoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/repository/RepositoryCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/service/ServiceCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/controller/ControllerCategory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/dto/CategoryDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/dto/ComputerAddDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/dto/HistoryAddDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/dto/OrderComputerDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/repository/RepositoryCategory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/repository/RepositoryCreditCart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/repository/RepositoryHistoryOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/repository/RepositoryOrderComputer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/repository/RepositoryProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/service/ServiceCategory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/Http/Shop.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/Pages/MainPage/MainPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/Pages/PCPage/PCPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/sql/query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/back/sql/query.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/back/controller/ControllerUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/controller/ControllerUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/back/entity/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/entity/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/back/entity/HistoryOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/entity/HistoryOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/back/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/entity/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/back/repository/RepositoryComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/repository/RepositoryComputer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/back/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/back/service/ServiceComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/service/ServiceComputer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/example/back/service/ServiceUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/example/back/service/ServiceUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/controller/ControllerComputer.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/controller/ControllerComputer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/controller/ControllerHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/controller/ControllerHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/controller/ControllerUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/controller/ControllerUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/dto/CreditCartDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/dto/CreditCartDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/dto/HistoryOrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/dto/HistoryOrderDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/Computer.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/Computer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/CreditCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/CreditCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/HistoryOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/HistoryOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/OrderComputer.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/OrderComputer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/entity/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/repository/RepositoryComputer.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/repository/RepositoryComputer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/service/ServiceComputer.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/service/ServiceComputer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/service/ServiceHistoryOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/service/ServiceHistoryOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/target/classes/com/example/back/service/ServiceUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/back/target/classes/com/example/back/service/ServiceUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/.env" beforeDir="false" afterPath="$PROJECT_DIR$/front/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/front/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/front/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/android-icon-144x144.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/android-icon-144x144.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/android-icon-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/android-icon-192x192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/android-icon-36x36.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/android-icon-36x36.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/android-icon-48x48.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/android-icon-48x48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/android-icon-72x72.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/android-icon-72x72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/android-icon-96x96.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/android-icon-96x96.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-114x114.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-114x114.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-120x120.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-120x120.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-144x144.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-144x144.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-152x152.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-152x152.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-180x180.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-180x180.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-57x57.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-57x57.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-60x60.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-60x60.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-72x72.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-72x72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-76x76.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-76x76.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon-precomposed.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon-precomposed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/apple-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/apple-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/browserconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/browserconfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/favicon-16x16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/favicon-32x32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/favicon-96x96.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/favicon-96x96.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/logo192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/logo512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/ms-icon-144x144.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/ms-icon-144x144.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/ms-icon-150x150.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/ms-icon-150x150.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/ms-icon-310x310.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/ms-icon-310x310.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/ms-icon-70x70.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/ms-icon-70x70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/CartItem/CartItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/CartItem/CartItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/CartItem/CartItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/Dropdown/Dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Dropdown/Dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Dropdown/Dropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/Item/Item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Item/Item.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Item/Item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/UI/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/UI/Button/Button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/UI/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/UI/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/UI/CheckBox/CheckBox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/UI/CheckBox/CheckBox.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/UI/CheckBox/CheckBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/UI/CheckBox/CheckBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/UI/Input/Input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/UI/Input/Input.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/UI/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/UI/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/UI/Switch/Switch.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/UI/Switch/Switch.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/UI/Switch/Switch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/UI/Switch/Switch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/YandexMap/YandexMap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/YandexMap/YandexMap.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Components/YandexMap/YandexMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/YandexMap/YandexMap.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Http/Address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/Address.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Http/Card.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/Card.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Http/Cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/Cart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Http/Favorite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/Favorite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Http/Order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/Order.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Http/Shop.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Http/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Http/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/AboutPage/AboutPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/AboutPage/AboutPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/AboutPage/AboutPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/AboutPage/AboutPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/CartPage/CartPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/CartPage/CartPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/CartPage/CartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/CartPage/CartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/ContactsPage/ContactsPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/ContactsPage/ContactsPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/ContactsPage/ContactsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/ContactsPage/ContactsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/FinishedPage/FinishedPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/FinishedPage/FinishedPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/FinishedPage/FinishedPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/FinishedPage/FinishedPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/MainPage/MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/MainPage/MainPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/MainPage/MainPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/OrderPage/OrderPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/OrderPage/OrderPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/OrderPage/OrderPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/OrderPage/OrderPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/PCPage/PCPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/PCPage/PCPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/PCPage/PCPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/ProfilePage/ProfilePage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/ProfilePage/ProfilePage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/ProfilePage/ProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/ProfilePage/ProfilePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/SIgnIn/SignIn.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/SIgnIn/SignIn.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/SIgnIn/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/SIgnIn/SignIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/SignUp/SignUp.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/SignUp/SignUp.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Pages/SignUp/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/SignUp/SignUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/Utils/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Utils/Routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/Asus-Logo-1995-present.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/Asus-Logo-1995-present.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/Logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/Logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/about__img.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/about__img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/acer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/acer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/address-svgrepo-com.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/address-svgrepo-com.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/alih.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/alih.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/clock-three-svgrepo-com.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/clock-three-svgrepo-com.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/gigabyte.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/gigabyte.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/hyperx-logo-lg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/hyperx-logo-lg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/icons8-search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/icons8-search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/kingston-logo-blkText.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/kingston-logo-blkText.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/lenovo.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/lenovo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/logo_palit.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/logo_palit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/main-screen__bgc.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/main-screen__bgc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/msi.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/msi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/phone-svgrepo-com.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/phone-svgrepo-com.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/png-transparent-asus-logo-asus-eee-pad-transformer-logo-republic-of-gamers-asus-logo-blue-text-trademark.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/png-transparent-asus-logo-asus-eee-pad-transformer-logo-republic-of-gamers-asus-logo-blue-text-trademark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/profile-round-1346-svgrepo-com.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/profile-round-1346-svgrepo-com.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/seasonic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/seasonic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/tima.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/tima.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/assets/images/zhanatik.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/images/zhanatik.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pcPoint/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Components/CartItem/CartItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/CartItem/CartItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Components/Item/Item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Item/Item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Components/Layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Http/Address.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Http/Card.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Http/Cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/Cart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Http/Favorite.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Http/Order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/Order.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Http/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Http/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/CartPage/CartPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/CartPage/CartPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/CartPage/CartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/CartPage/CartPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/FinishedPage/FinishedPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/FinishedPage/FinishedPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/FinishedPage/FinishedPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/FinishedPage/FinishedPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/MainPage/MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/MainPage/MainPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/OrderPage/OrderPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/OrderPage/OrderPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/OrderPage/OrderPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/OrderPage/OrderPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/PCPage/PCPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/PCPage/PCPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/PCPage/PCPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/PCPage/PCPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/ProfilePage/ProfilePage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/ProfilePage/ProfilePage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Pages/ProfilePage/ProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Pages/ProfilePage/ProfilePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,22 +48,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maksi/WebstormProjects/computer-sites/front/pcPoint/package.json&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\maksi\\WebstormProjects\\computer-sites\\front\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/maksi/WebstormProjects/computer-sites/front/pcPoint/package.json",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\maksi\\WebstormProjects\\computer-sites\\front\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\maksi\WebstormProjects\computer-sites\front" />
@@ -236,7 +97,8 @@
       <workItem from="1717926290407" duration="2678000" />
       <workItem from="1717936038895" duration="4231000" />
       <workItem from="1717956806323" duration="722000" />
-      <workItem from="1717957594986" duration="4269000" />
+      <workItem from="1717957594986" duration="4691000" />
+      <workItem from="1717962359087" duration="6266000" />
     </task>
     <servers />
   </component>

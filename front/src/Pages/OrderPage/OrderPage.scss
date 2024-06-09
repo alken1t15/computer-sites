@@ -85,6 +85,7 @@
     border: none;
     width: 100%;
     outline: none;
+    color: #fff;
   }
 
 }
@@ -231,21 +232,22 @@
 
 .added-info-item__input-card{
   width: 100%;
-  background-color: #f8f9fa;
+  background-color: transparent;
   border-radius: 20px;
-  border: none;
+  border: 1px solid #fff;
   outline: none;
   padding: 9px 19px;
   font-weight: 500;
   font-size: 16px;
   line-height: 110%;
-  color: #414141;
+  color: #fff;
   letter-spacing: -0.02em;
   &-m{
     width: 180px;
+    color: #fff;
   }
   & > *::placeholder {
-    color: #bdbdbd;
+    color: #fff;
   }
 }
 
@@ -289,6 +291,7 @@
 
 
 .total-box{
+
   margin-top: 50px;
   padding: 22px 18px;
   border-radius: 20px;
@@ -345,4 +348,10 @@
 .order-switcher{
   margin-top: 15px;
   width: 100%;
+}
+
+.card-form{
+  width: 350px;
+  border-radius: 15px;
+  border: none;
 }

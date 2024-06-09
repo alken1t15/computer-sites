@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 
 import './PCPage.scss'
-import {Link, useParams} from "react-router-dom";
-import {SHOP_PAGE_ROUTE} from "../../Utils/Routes";
+import {Link, useNavigate, useParams} from "react-router-dom";
+import {SHOP_PAGE_ROUTE, SIGN_IN_ROUTE} from "../../Utils/Routes";
 import {getShopItem} from "../../Http/Shop";
+import {addToCart} from "../../Http/Cart";
 
 interface ICurPc{
     id: number;
@@ -57,6 +58,7 @@ const PCPage: React.FC = () => {
 
     },[])
     console.log(curPc)
+    let navigator = useNavigate();
     return (
         <div className={'container'}>
             <div className="modal-container" onClick={(e)=>{
@@ -68,29 +70,32 @@ const PCPage: React.FC = () => {
                     <div className="modal-top-l"> <img src={curPc ? curPc.img : ''} alt="" className="modal__img"/></div>
                     <div className="modal-top-r">
 
-                        <p className="modal-top-r__title" style={{textAlign: 'right'}}>{curPc?.price}₸</p>
-                        <p className="modal-hero-top__title" style={{marginTop: 50}}>Основная информация:</p>
-                        <p className="modal-hero-top__title" style={{marginTop: 15}}>Срок гарантии: 12 мес</p>
+                        <p className="modal-top-r__title" style={{textAlign: 'right'}}>Цена: {curPc?.price}₸</p>
+                        <p className="modal-hero-top__title" style={{marginTop: 50}}>Дополнительная информация:</p>
+                        <p className="modal-hero-top__t1" style={{marginTop: 15, textAlign: 'right'}}>Срок гарантии: 12 мес</p>
+                        <p className="modal-hero-top__t1" style={{marginTop: 15, textAlign: 'right'}}>Доступно во всех филиалах</p>
+                        <div className="modal-bot">
+                            <button className={'add-to-cart-btn'} onClick={(e)=>{
+                                e.stopPropagation();
+                                if(curPc?.id) {
+                                    addToCart(curPc?.id).then((response)=>{
+
+                                    }).catch((error)=>{
+                                        navigator(SIGN_IN_ROUTE)
+                                    })
+                                }
+
+                            }}>Добавить в корзину</button>
+                        </div>
                     </div>
                 </div>
-                <div className="modal-hero-top">
-                    <p className="modal-hero-top__title">Основная информация</p>
-                    {/*<div className="modal-hero-top-left">*/}
-                    {/*    <p className="modal-hero-top-left__text">{curItem.name}</p>*/}
-                    {/*    <p className="modal-hero-top-left__subtext">{curItem.weight} г</p>*/}
-                    {/*</div>*/}
-                </div>
                 <div className="modal-hero-middle">
-                    {/*<p className="modal-hero-middle__price">{curItem.price} ₸</p>*/}
-                    {/*<p className="modal-hero-middle__text">{curItem.text}</p>*/}
-                    {/*<p className="modal-hero-middle__descr">Состав: {curItem.description}</p>*/}
+                    <p className="modal-hero-top__title">Основная информация:</p>
+                    {description.map((el: any, index: any)=>(
+                        <p className="modal-hero-middle__text" style={{marginTop: 15}} key={index}>{el}</p>
+                    ))}
                 </div>
-                <div className="modal-bot">
-                    <button className={'add-to-cart-btn'} onClick={(e)=>{
-                        e.stopPropagation();
-                        // addCart(curPc.id, 1)
-                    }}>Добавить в корзину</button>
-                </div>
+
             </div>
         </div>
     );

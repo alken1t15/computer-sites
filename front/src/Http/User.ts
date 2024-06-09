@@ -20,13 +20,19 @@ export const getInfo = async () => {
 
 export const getPersonalInfo = async () => {
     let res;
-    res = await $api.get(`login/`);
+    res = await $api.get(`user/profile`);
     return res;
 };
 
 export const deleteUser = async () => {
     let res;
-    res = await $api.get(`login/remove`);
+    res = await $api.get(`user/delete`);
+    return res;
+};
+
+export const getCategories = async () => {
+    let res;
+    res = await $api.get(`category`);
     return res;
 };
 

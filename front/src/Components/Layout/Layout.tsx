@@ -4,7 +4,7 @@ import {Outlet} from "react-router-dom";
 import Footer from "../Footer/Footer";
 const Layout: React.FC = () => {
     return (
-        <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+        <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: '100vh'}}>
             <Header/>
 
             <div style={{height: '100%'}} >

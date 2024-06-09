@@ -1,15 +1,9 @@
 import {$api} from './index';
 
 
-export const addOrder = async (idAddress: number, cardId: number, comment: string, timeOrder: string, bonus: boolean, idOrders: number[]) => {
+export const addOrder = async (number: string, date: string, security: string, name: string, address: string) => {
     let res;
-    if(comment){
-        res = await $api.post(`/history/order/add`,{idAddress: idAddress, idCart: cardId, comment: comment, timeOrder: timeOrder, bonus: bonus, idOrders: idOrders });
-    }
-    else{
-        res = await $api.post(`/history/order/add`,{idAddress: idAddress, idCart: cardId, timeOrder: timeOrder, bonus: bonus, idOrders: idOrders });
-    }
-
+    res = await $api.post(`/history/add`,{number: number,date:date, security:security, name:name, address:address });
     return res;
 };
 
