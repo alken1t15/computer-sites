@@ -70,6 +70,7 @@ const PCPage: React.FC = () => {
 
                         <p className="modal-top-r__title" style={{textAlign: 'right'}}>{curPc?.price}₸</p>
                         <p className="modal-hero-top__title" style={{marginTop: 50}}>Основная информация:</p>
+                        <p className="modal-hero-top__title" style={{marginTop: 15}}>Срок гарантии: 12 мес</p>
                     </div>
                 </div>
                 <div className="modal-hero-top">
