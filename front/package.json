@@ -31,10 +31,10 @@
     "ymaps": "^0.2.1"
   },
   "scripts": {
-    "start": "../../pcPoint/node_modules/.bin/react-scripts start",
-    "build": "../../pcPoint/node_modules/.bin/react-scripts build",
-    "test": "../../pcPoint/node_modules/.bin/react-scripts test",
-    "eject": "../../pcPoint/node_modules/.bin/react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

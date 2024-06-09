@@ -84,4 +84,10 @@ public class ServiceUser {
         users.setPassword(newPassword);
         return new ResponseEntity(HttpStatus.OK);
     }
+
+    public ResponseEntity deleteUser() {
+        Users user = getUser();
+        repositoryUsers.delete(user);
+        return new ResponseEntity(HttpStatus.OK);
+    }
 }

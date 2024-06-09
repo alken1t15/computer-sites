@@ -70,6 +70,7 @@
 }
 
 .main-page-body{
+  min-height: 476px;
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -89,7 +90,7 @@
   &-container{
     width: 500px;
     padding: 50px;
-    background-color: #F8F9FA;
+    background-color: #000;
     border-radius: 20px;
     border: none;
     display: flex;
@@ -102,12 +103,16 @@
     justify-content: space-between;
     width: 100%;
     align-items: flex-start;
+    &__title{
+      font-size: 24px;
+    }
     &-left{
       &__text{
         font-weight: 500;
         font-size: 22px;
         letter-spacing: 0.01em;
         color: #414141;
+
       }
       &__subtext{
         margin-top: 5px;

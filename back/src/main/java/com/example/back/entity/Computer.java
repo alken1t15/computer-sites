@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Getter
@@ -19,6 +20,7 @@ public class Computer {
     private String name;
     private Integer price;
     private String img;
+    private Float weight ;
 
     @ManyToMany
     @JoinTable(
@@ -36,5 +38,18 @@ public class Computer {
     public Computer(String name, Integer price) {
         this.name = name;
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Computer computer = (Computer) o;
+        return Objects.equals(name, computer.name) && Objects.equals(price, computer.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price);
     }
 }

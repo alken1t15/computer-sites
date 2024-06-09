@@ -33,6 +33,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers(HttpMethod.POST, "/user/jwt").permitAll()
                         .requestMatchers(HttpMethod.POST,"/user/add").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/computer/").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/computer/{id}").permitAll()
                         .anyRequest().authenticated()).cors((cors) -> cors.configurationSource(corsConfigurationSource()))
                 .build();
     }

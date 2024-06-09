@@ -81,4 +81,9 @@ public class ControllerUser {
     private ResponseEntity editUser(@RequestBody @Validated UsersAddDTO user,BindingResult bindingResult){
         return serviceUser.editUser(user,bindingResult);
     }
+
+    @PostMapping("/delete")
+    private ResponseEntity deleteUser(){
+        return serviceUser.deleteUser();
+    }
 }

@@ -4,8 +4,8 @@ import React, {useEffect, useState} from 'react';
 import './CartPage.scss';
 import CartItem from "../../Components/CartItem/CartItem";
 import item from "../../Components/Item/Item";
-import {Link} from "react-router-dom";
-import {MAIN_PAGES_ROUTE, ORDER_PAGE_ROUTE, SHOP_PAGE_ROUTE} from "../../Utils/Routes";
+import {Link, useNavigate} from "react-router-dom";
+import {MAIN_PAGES_ROUTE, ORDER_PAGE_ROUTE, SHOP_PAGE_ROUTE, SIGN_IN_ROUTE} from "../../Utils/Routes";
 import {getCartItems, updateCartItemCount} from "../../Http/Cart";
 
 const CartPage: React.FC = () => {
@@ -20,7 +20,7 @@ const CartPage: React.FC = () => {
         },
     ])
     let[total, setTotal] = useState(0)
-
+    let navigator = useNavigate()
     function updateCount(count: number, id: number, status: string){
         if(count > 0){
             let newArr = items.map((el, index)=>{
@@ -99,6 +99,10 @@ const CartPage: React.FC = () => {
         //     setItems(newArr)
         // })
         // updateTotal();
+        let token = localStorage.getItem('token');
+        if(!token){
+            navigator(SIGN_IN_ROUTE)
+        }
     }, [])
 
     useEffect(()=>{
