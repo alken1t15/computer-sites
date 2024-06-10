@@ -27,6 +27,7 @@ VALUES ('Процессор'),
        ('Материнская плата'),
        ('Графическая карта'),
        ('Накопитель'),
+       ('Корпус'),
        ('Охлаждение');
 
 create table product
@@ -52,23 +53,26 @@ VALUES (1, 'Intel Core i9-9900K', 180000, '1.png', 'Процессор Intel Cor
        (5, 'AMD Radeon RX 6800 XT', 280000, '1.png', 'Графическая карта AMD Radeon RX 6800 XT'),
        (6, 'Samsung 970 EVO 1TB', 100000, '1.png', 'Накопитель Samsung 970 EVO, 1 ТБ'),
        (6, 'Western Digital Black SN750 1TB', 95000, '1.png', 'Накопитель Western Digital Black SN750, 1 ТБ'),
-       (7, 'Cooler Master Hyper 212', 20000, '1.png', 'Охлаждение Cooler Master Hyper 212'),
-       (7, 'Noctua NH-D15', 35000, '1.png', 'Охлаждение Noctua NH-D15');
+       (8, 'Cooler Master Hyper 212', 20000, '1.png', 'Охлаждение Cooler Master Hyper 212'),
+       (8, 'Noctua NH-D15', 35000, '1.png', 'Охлаждение Noctua NH-D15'),
+       (7, 'Dexp', 25000, '1.png', 'Корпус от Dexp'),
+       (7, 'HyperPc', 37000, '1.png', 'Корпус от HyperPc');
 
 create table computer
 (
     id    serial primary key,
     name  varchar not null,
     price int     not null,
-    img   varchar
+    img   varchar,
+    weight float not null
 );
 
-insert into computer (name, price, img)
-VALUES ('Супер мега макс', 1000000, '1.png'),
-       ('Игровая станция', 850000, '1.png'),
-       ('Рабочая станция', 750000, '1.png'),
-       ('Бюджетный вариант', 300000, '1.png'),
-       ('Ультра компакт', 450000, '1.png');
+insert into computer (name, price, img, weight)
+VALUES ('Супер мега макс', 1000000, '1.png', 1500),
+       ('Игровая станция', 850000, '1.png', 3500),
+       ('Рабочая станция', 750000, '1.png', 1700),
+       ('Бюджетный вариант', 300000, '1.png', 1900),
+       ('Ультра компакт', 450000, '1.png', 1200);
 
 create table computer_product
 (
@@ -78,9 +82,15 @@ create table computer_product
 );
 
 insert into computer_product (computer_id, product_id)
-VALUES (1, 1),
+VALUES
        (1, 1),
        (1, 3),
+       (1, 5),
+       (1, 7),
+       (1, 9),
+       (1, 11),
+       (1, 13),
+       (1, 15),
        (2, 1),
        (2, 5),
        (3, 1),

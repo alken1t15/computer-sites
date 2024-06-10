@@ -10,8 +10,10 @@ import com.example.back.entity.Computer;
 import com.example.back.entity.Users;
 import com.example.back.repository.RepositoryCart;
 import com.example.back.repository.RepositoryCartComputer;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -80,6 +82,73 @@ public class ServiceCart {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+//    public ResponseEntity addEditCount(CartEditCountDTO cartEditCountDTO, BindingResult bindingResult) {
+//        if (bindingResult.hasErrors()) {
+//            List<String> errors = new ArrayList<>();
+//            for (FieldError fieldError : bindingResult.getFieldErrors()) {
+//                String field = fieldError.getField();
+//                String nameError = fieldError.getDefaultMessage();
+//                errors.add(String.format("Поле %s ошибка: %s", field, nameError));
+//            }
+//            return new ResponseEntity(errors, HttpStatus.BAD_REQUEST);
+//        }
+//        Computer computer = serviceComputer.findById(cartEditCountDTO.getId());
+//        if (computer == null) {
+//            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+//        }
+//        Users user = serviceUser.getUser();
+//        List<Cart> carts = user.getCarts();
+//        for (Cart c : carts) {
+//            List<CartComputer> cartComputers = c.getCartComputers();
+//            int total = 0;
+//            boolean add = false;
+//            boolean delete = false;
+//            for (CartComputer cartComputer : cartComputers) {
+//                if (cartComputer.getComputer().getId() == cartEditCountDTO.getId()) {
+//                    if (cartEditCountDTO.getName().equals("+")) {
+//                        cartComputer.setCount(cartComputer.getCount() + 1);
+//                    } else if (cartEditCountDTO.getName().equals("-")) {
+//                        if (cartComputer.getCount() - 1 == 0) {
+//                            repositoryCartComputer.delete(cartComputer);
+//                            cartComputers.remove(cartComputer);
+//                            delete = true;
+//                            break;
+//                        } else {
+//                            cartComputer.setCount(cartComputer.getCount() - 1);
+//                        }
+//                    }
+//                    cartComputer.setPrice(cartComputer.getComputer().getPrice() * cartComputer.getCount());
+//                    repositoryCartComputer.save(cartComputer);
+//                    add = true;
+//                }
+//                total += cartComputer.getPrice();
+//            }
+//            if (cartComputers.isEmpty()) {
+//                repositoryCart.delete(c);
+//                break;
+//            }
+//            if (delete) {
+//                for (CartComputer cartComputer : cartComputers) {
+//                    if (cartComputer.getComputer().getId() == cartEditCountDTO.getId()) {
+//                        cartComputer.setPrice(cartComputer.getComputer().getPrice() * cartComputer.getCount());
+//                        repositoryCartComputer.save(cartComputer);
+//                    }
+//                    total += cartComputer.getPrice();
+//                }
+//            }
+//            c.setTotalPrice(total);
+//            repositoryCart.save(c);
+//            if (add) {
+//
+//            } else {
+//                repositoryCartComputer.save(new CartComputer(computer, c, computer.getPrice(), 1));
+//            }
+//        }
+//        return new ResponseEntity(HttpStatus.OK);
+//    }
+
+    @Transactional
+    @Modifying
     public ResponseEntity addEditCount(CartEditCountDTO cartEditCountDTO, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             List<String> errors = new ArrayList<>();
@@ -98,73 +167,59 @@ public class ServiceCart {
         List<Cart> carts = user.getCarts();
         for (Cart c : carts) {
             List<CartComputer> cartComputers = c.getCartComputers();
-            int total = 0;
-            boolean add = false;
-            boolean delete = false;
             for (CartComputer cartComputer : cartComputers) {
                 if (cartComputer.getComputer().getId() == cartEditCountDTO.getId()) {
                     if (cartEditCountDTO.getName().equals("+")) {
                         cartComputer.setCount(cartComputer.getCount() + 1);
+                        repositoryCartComputer.save(cartComputer);
                     } else if (cartEditCountDTO.getName().equals("-")) {
                         if (cartComputer.getCount() - 1 == 0) {
                             repositoryCartComputer.delete(cartComputer);
                             cartComputers.remove(cartComputer);
-                            delete = true;
+                            c.setCartComputers(cartComputers);
+                            repositoryCart.save(c);
+                            repositoryCartComputer.flush();
+                            repositoryCart.delete(c);
                             break;
                         } else {
                             cartComputer.setCount(cartComputer.getCount() - 1);
+                            repositoryCartComputer.save(cartComputer);
                         }
                     }
-                    cartComputer.setPrice(cartComputer.getComputer().getPrice() * cartComputer.getCount());
-                    repositoryCartComputer.save(cartComputer);
-                    add = true;
                 }
-                total += cartComputer.getPrice();
             }
             if (cartComputers.isEmpty()) {
                 repositoryCart.delete(c);
+                carts.remove(c);
+                user.setCarts(carts);
+                serviceUser.save(user);
                 break;
-            } else {
-                if (delete) {
-                    cartComputers = c.getCartComputers();
-                    for (CartComputer cartComputer : cartComputers) {
-                        if (cartComputer.getComputer().getId() == cartEditCountDTO.getId()) {
-                            if (cartEditCountDTO.getName().equals("+")) {
-                                cartComputer.setCount(cartComputer.getCount() + 1);
-                            } else if (cartEditCountDTO.getName().equals("-")) {
-                                if (cartComputer.getCount() - 1 == 0) {
-                                    repositoryCartComputer.delete(cartComputer);
-                                    cartComputers.remove(cartComputer);
-                                    delete = true;
-                                    break;
-                                } else {
-                                    cartComputer.setCount(cartComputer.getCount() - 1);
-                                }
-                            }
-                            cartComputer.setPrice(cartComputer.getComputer().getPrice() * cartComputer.getCount());
-                            repositoryCartComputer.save(cartComputer);
-                            add = true;
-                        }
-                        total += cartComputer.getPrice();
-                    }
-                }
-                c.setTotalPrice(total);
-                repositoryCart.save(c);
-
-            }
-            if (add) {
-
-            } else {
-                repositoryCartComputer.save(new CartComputer(computer, c, computer.getPrice(), 1));
             }
         }
+        updatePrice();
         return new ResponseEntity(HttpStatus.OK);
+    }
+
+    private void updatePrice() {
+        Users user = serviceUser.getUser();
+        List<Cart> carts = user.getCarts();
+        for (Cart c : carts) {
+            int total = 0;
+            List<CartComputer> cartComputers = c.getCartComputers();
+            for (CartComputer cartComputer : cartComputers) {
+                cartComputer.setPrice(cartComputer.getComputer().getPrice() * cartComputer.getCount());
+                repositoryCartComputer.save(cartComputer);
+                total += cartComputer.getPrice();
+            }
+            c.setTotalPrice(total);
+            repositoryCart.save(c);
+        }
     }
 
     public ResponseEntity getCart() {
         Users user = serviceUser.getUser();
         List<Cart> carts = user.getCarts();
-        if (carts.isEmpty()){
+        if (carts.isEmpty()) {
             return new ResponseEntity(HttpStatus.OK);
         }
         List<CartComputerDTO> cartComputerDTOS = new ArrayList<>();

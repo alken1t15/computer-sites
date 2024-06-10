@@ -13,4 +13,5 @@ public class ComputerOneDTO {
     private Integer price;
     private byte[] img;
     private List<ProductDTO> products;
+    private Double weight;
 }

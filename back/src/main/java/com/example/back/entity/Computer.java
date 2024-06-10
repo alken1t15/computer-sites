@@ -20,6 +20,7 @@ public class Computer {
     private String name;
     private Integer price;
     private String img;
+    private Double weight ;
 
     @ManyToMany
     @JoinTable(

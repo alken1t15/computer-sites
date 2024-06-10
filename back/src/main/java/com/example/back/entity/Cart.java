@@ -21,11 +21,13 @@ public class Cart {
     private Users user;
     @Column(name = "total_price")
     private Integer totalPrice;
-    @OneToMany(mappedBy = "cart",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "cart",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<CartComputer> cartComputers;
 
     public Cart(Users user, Integer totalPrice) {
         this.user = user;
         this.totalPrice = totalPrice;
     }
+
+
 }
